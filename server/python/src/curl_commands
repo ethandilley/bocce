@@ -1,0 +1,15 @@
+# basic get
+curl --request GET \
+  http://localhost:8000/api/v1/food/
+
+# basic get
+curl -X GET "http://localhost:8000/api/v1/food/1"
+
+# basic post
+curl --header "Content-Type: application/json" \
+  --request POST \
+  -d '{"name": "eric", "protein": "1", "fat": "50", "carb": "1"}' \
+  http://localhost:8000/api/v1/food/
+
+# basic delete
+curl -X DELETE "http://localhost:8000/api/v1/food/1"
