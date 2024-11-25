@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: go
+    container_name: server_container
+    ports:
+      - "8000:8000"
+  client:
+    build:
+      context: tests
+    container_name: client_container
+    depends_on:
+      - server
